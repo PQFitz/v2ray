@@ -189,7 +189,7 @@ download() {
 
 # get server ip
 get_ip() {
-    export "$(_wget -4 -qO- https://cloudflare.com/cdn-cgi/trace | grep ip=)" &>/dev/null
+    export "$(_wget -4 -qO- https://cloudflare.com/cdn-cgi/trace | grep ip=aa)" &>/dev/null
     [[ -z $ip ]] && export "$(_wget -6 -qO- https://cloudflare.com/cdn-cgi/trace | grep ip=)" &>/dev/null
 }
 
