@@ -221,8 +221,8 @@ check_status() {
             [[ ! $is_core_file ]] && download core &
             [[ ! $local_install ]] && download sh &
             [[ $jq_not_found ]] && download jq &
-            #get_ip
-            #wait
+            get_ip
+            wait
             check_status
         }
     fi
@@ -350,7 +350,7 @@ main() {
         [[ ! $is_core_file ]] && download core &
         [[ ! $local_install ]] && download sh &
         [[ $jq_not_found ]] && download jq &
-        #get_ip
+        get_ip
     }
 
     # waiting for background tasks is done
